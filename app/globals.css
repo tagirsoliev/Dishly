@@ -1,26 +1,58 @@
 @import "tailwindcss";
+@import "@heroui/styles";
+
+@custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+    /* Warm cozy palette — cream background, terracotta accent */
+    --background: #fdf6ee;
+    --foreground: #2b2118;
+
+    --surface: #ffffff;
+    --surface-secondary: #f5ead9;
+    --surface-tertiary: #efddc4;
+
+    --border: #e8d9c3;
+    --separator: #efe2cc;
+    --muted: #8a7a68;
+
+    --accent: #cc6b49;
+    --accent-foreground: #fff8f1;
+    --accent-hover: #b5573a;
+    --accent-soft: #f3ddd2;
+    --accent-soft-foreground: #8a4128;
+
+    --radius: 0.85rem;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --font-sans: var(--font-geist-sans);
+    --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.dark {
+    --background: #1c1612;
+    --foreground: #f2e9dd;
+
+    --surface: #261e18;
+    --surface-secondary: #2e251d;
+    --surface-tertiary: #382c22;
+
+    --border: #3a2e24;
+    --separator: #332821;
+    --muted: #b3a08a;
+
+    --accent: #e08355;
+    --accent-foreground: #1c1612;
+    --accent-hover: #c96b3e;
+    --accent-soft: #4a3326;
+    --accent-soft-foreground: #f0b48d;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+    background: var(--background);
+    color: var(--foreground);
+    font-family: Arial, Helvetica, sans-serif;
 }
