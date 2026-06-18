@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import "./globals.css";
 import Header from "@/components/header";
+import { siteConfig } from "@/config/site.config";
 
 const geistSans = Geist({
     variable: "--font-geist-sans",
@@ -15,8 +16,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-    title: "Dishly",
-    description: "Discover, save, and share recipes from around the world.",
+    title: siteConfig.title,
+    description: siteConfig.description,
 };
 
 export default function RootLayout({
