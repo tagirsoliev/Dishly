@@ -6,10 +6,15 @@ export type NavItem = {
 export const siteConfig = {
   title: "Dishly",
   description: "Discover, save, and share recipes from around the world.",
+  
   mainNav: [
     { label: "Recipes", href: "/recipes" },
     { label: "Categories", href: "/categories" },
-    { label: "Favorites", href: "/favorites" },
+    { label: "Favorites", href: "/recipes?favorites=true" },
     { label: "About", href: "/about" },
   ] satisfies NavItem[],
+
+  links: {
+    github: "https://github.com/tagirsoliev/Dishly",
+  },
 };

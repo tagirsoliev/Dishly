@@ -17,7 +17,8 @@ function NavLinks({ onLinkClick }: { onLinkClick?: () => void }) {
     return (
         <>
             {siteConfig.mainNav.map((link) => {
-                const isActive = pathname.startsWith(link.href);
+                const linkPath = link.href.split("?")[0];
+                const isActive = pathname.startsWith(linkPath);
                 return (
                     <Link
                         key={link.href}

@@ -23,6 +23,9 @@
     --accent-soft-foreground: #8a4128;
 
     --radius: 0.85rem;
+
+    --field-border-width: 1px;
+    --field-border: var(--border);
 }
 
 @theme inline {
